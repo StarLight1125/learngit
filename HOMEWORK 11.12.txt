@@ -1,30 +1,35 @@
-//第二个实验
+// The Third
 
-#define TEMP0(10)
-#define TEMP1(60)
-#define ADC0(815)
-#define ADC1(397)
-
-void setup()
+int n=0;
+void setup ()
 {
-    // put your setup code here, to run once:
-    Serial.begin(9600);
+    pinMode(4,INPUT);
+    pinMode(6,OUTPUT);      //该端口需要选择有#号标识的数字口
+    pinMode(10,INPUT);
 }
 
 void loop()
 {
-    // put your main code here, to run repeatedly:
-    short int read =  analogRead(analogInPin);
-    short int result = convert_adc2temperature(short int read,short int ADC0,short int ADC1,short int TEMP0,short int TEMP1)
-
-    Serial.println(result);
-    delay(500);
+    int up =digitalRead(4);          //读取4号口的状态
+    int down = digitalRead(10);      //读取10号口的状态
+    if (up==HIGH)                    //判断4号口目前是否是高电平
+    {
+        n=n+5;                         //每次累加值为5
+        if (n>=255)
+        {
+            n=255;
+        }            //限定最大值为255
+        analogWrite(6,n);               //使用PWM控制6号口输出，变量n的取值范围是0-255
+        delay (300);
+    }
+    if (down==HIGH)                    //减少亮度
+    {
+        n=n-5;
+        if (n<=0)
+        {
+            n=0;
+        }
+        analogWrite(6,n);
+        delay (300);
+    }
 }
-
-short int convert_adc2temperature(short int ax,short int a0,short int a1,short int temp0,short int temp1)
-{
-    short int tempx;
-    tempx = temp0+(ax-a0)*(temp1-temp0)/(a1-a0);
-    return tempx;
-}
-
