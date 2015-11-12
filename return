@@ -1,0 +1,78 @@
+[33mcommit f08d9938c53626f15a839f963e5d050b473d7630[m
+Merge: 3b4fa32 f8d921b
+Author: StarLight <qxm1125@sina.com>
+Date:   Sat Oct 10 16:43:31 2015 +0800
+
+    conflict fixed
+
+[33mcommit 3b4fa3231ab7b251589c4d38fbadf4da25fbb733[m
+Author: StarLight <qxm1125@sina.com>
+Date:   Sat Oct 10 16:40:49 2015 +0800
+
+    @simple
+
+[33mcommit f8d921b55201144b99c6a4fbe49906a14600ddd9[m
+Author: StarLight <qxm1125@sina.com>
+Date:   Sat Oct 10 16:39:24 2015 +0800
+
+    and simple
+
+[33mcommit 64e7106b55ea9a5657138cc3eb16851a996e045d[m
+Author: StarLight <qxm1125@sina.com>
+Date:   Sat Oct 10 16:36:41 2015 +0800
+
+    branch test
+
+[33mcommit b770d81981203767ca81178e36a7f18fc4a6b067[m
+Author: StarLight <qxm1125@sina.com>
+Date:   Sat Oct 10 16:28:12 2015 +0800
+
+    branch test
+
+[33mcommit 6ec5d9cb3b0fd24b71ec3d593c06571eaad9f95a[m
+Author: StarLight <qxm1125@sina.com>
+Date:   Fri Oct 9 18:24:59 2015 +0800
+
+    add test.txt
+
+[33mcommit 03a9233a12fdd67e9072aa9e6b0beac9fceffdf8[m
+Author: StarLight <qxm1125@sina.com>
+Date:   Fri Oct 9 17:59:03 2015 +0800
+
+    remove test.txt
+
+[33mcommit 60042dbbae4e61691c832898b80389e5d98f1b0d[m
+Author: StarLight <qxm1125@sina.com>
+Date:   Fri Oct 9 17:56:33 2015 +0800
+
+    add test.txt
+
+[33mcommit 7e2d36cad9efd3e8f5c49d6a06f3e85daec42024[m
+Author: StarLight <qxm1125@sina.com>
+Date:   Fri Oct 9 09:51:34 2015 +0800
+
+    git tracks changes
+
+[33mcommit 3ef1f3e16ec8f8af4dafc1e55f52c5eb3439debc[m
+Author: StarLight <qxm1125@sina.com>
+Date:   Fri Oct 9 09:48:12 2015 +0800
+
+    git tracks changes
+
+[33mcommit 3e653124bbaf1cfd9cd30b5e6344b0608568121f[m
+Author: StarLight <qxm1125@sina.com>
+Date:   Fri Oct 9 09:42:08 2015 +0800
+
+    understand how stage works
+
+[33mcommit 8da7fefaa6289934b9d606bcee0f9147314b0beb[m
+Author: StarLight <qxm1125@sina.com>
+Date:   Fri Oct 9 09:09:03 2015 +0800
+
+    add distributed
+
+[33mcommit 997946a0c831dc9c7c35d5dd4693545865735c89[m
+Author: StarLight <qxm1125@sina.com>
+Date:   Fri Oct 9 09:05:01 2015 +0800
+
+    wrote a readme file
