@@ -1,22 +1,30 @@
-//第一个实验利用PWM完成一个LED Fade in & Fade out的Arduino 实验
+//第二个实验
 
-int brightness=0;   //表示LED亮度
-int fadeAmount=5;  //亮度变化增减量
+#define TEMP0(10)
+#define TEMP1(60)
+#define ADC0(815)
+#define ADC1(397)
 
 void setup()
 {
-    pinMode(3,OUTPUT); //设置3号为输出端口
+    // put your setup code here, to run once:
+    Serial.begin(9600);
 }
 
 void loop()
 {
-    analogWrite(9,?brightness);//把brightness的值写入9号端口
-    ?brightness?=?brightness?+?fadeAmount;//改变brightness值，使亮度在下一次循环发生改变
+    // put your main code here, to run repeatedly:
+    short int read =  analogRead(analogInPin);
+    short int result = convert_adc2temperature(short int read,short int ADC0,short int ADC1,short int TEMP0,short int TEMP1)
 
-    if?(brightness?==?0?||?brightness?==?255)? ???
-    {
-       ?fadeAmount?=?‐fadeAmount?;
-        ?//在亮度最高(5V)与最低(0V)时进行转换??}??
-        delay(50);
-        ?//延时50毫秒，即保持brightness+fadeAmount状态50ms
-    }
+    Serial.println(result);
+    delay(500);
+}
+
+short int convert_adc2temperature(short int ax,short int a0,short int a1,short int temp0,short int temp1)
+{
+    short int tempx;
+    tempx = temp0+(ax-a0)*(temp1-temp0)/(a1-a0);
+    return tempx;
+}
+
