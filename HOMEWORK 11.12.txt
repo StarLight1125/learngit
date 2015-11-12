@@ -1,0 +1,22 @@
+//第一个实验利用PWM完成一个LED Fade in & Fade out的Arduino 实验
+
+int brightness=0;   //表示LED亮度
+int fadeAmount=5;  //亮度变化增减量
+
+void setup()
+{
+    pinMode(3,OUTPUT); //设置3号为输出端口
+}
+
+void loop()
+{
+    analogWrite(9,?brightness);//把brightness的值写入9号端口
+    ?brightness?=?brightness?+?fadeAmount;//改变brightness值，使亮度在下一次循环发生改变
+
+    if?(brightness?==?0?||?brightness?==?255)? ???
+    {
+       ?fadeAmount?=?‐fadeAmount?;
+        ?//在亮度最高(5V)与最低(0V)时进行转换??}??
+        delay(50);
+        ?//延时50毫秒，即保持brightness+fadeAmount状态50ms
+    }
